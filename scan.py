@@ -22,9 +22,9 @@ import urllib.parse
 #fall back on sample config
 #set config to a short var for ease of use
 try:
-	imp.find_module('configs')
-	import config
-	con = config.config
+	imp.find_module('customConfigs')
+	import customConfig
+	con = customConfig.config
 except ImportError:
 	import sampleConfig
 	con = sampleConfig.config
@@ -32,9 +32,12 @@ except ImportError:
 
 import buildMusic
 music = buildMusic.music()
-#music.build(con.dir)
+music.build(con.dir)
 
 music = music.build(con.dir)
+dat = []
+thedata = buildMusic.readDir(con.dir, dat)#@ToDo: work on importing sample dir
+#print(thedata)
 
 #output config message and endpoint
 print(con.msg+'\n')

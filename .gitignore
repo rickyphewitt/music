@@ -1,4 +1,5 @@
 #Files to ignore
-config.py
+customConfig.py
 *.pyc
-*.pyo
+*.py
+*.swpo
