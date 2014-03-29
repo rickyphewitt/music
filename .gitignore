@@ -1,2 +1,4 @@
-#Ignore Text Files
-.txt
+#Files to ignore
+config.py
+*.pyc
+*.pyo
