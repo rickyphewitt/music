@@ -4,7 +4,7 @@
 #Created Date: 12/27/13
 #Updated Date: 3/29/14
 
-
+#This is a test!
 #include libraries
 import os
 import time
@@ -22,7 +22,7 @@ import urllib.parse
 #fall back on sample config
 #set config to a short var for ease of use
 try:
-	imp.find_module('customConfigs')
+	imp.find_module('customConfig')
 	import customConfig
 	con = customConfig.config
 except ImportError:
